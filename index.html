@@ -1,0 +1,192 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f2ee" />
+  <title>ксюшичка и сашечка</title>
+  <meta name="description" content="свадебное приглашение ксении и александра — 23.07.2026" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <article class="invite" aria-label="свадебное приглашение от ксении и александра">
+      <div class="invite-bg" aria-hidden="true"></div>
+
+      <section class="content" aria-label="Основная информация">
+        <div class="top-copy" aria-label="Приглашение на свадьбу">
+          <svg class="arc-text arc-overline" viewBox="0 0 620 92" role="img" aria-label="приглашаем на свадьбу">
+            <path id="inviteArc" d="M94 58 Q310 18 526 58" />
+            <text><textPath href="#inviteArc" startOffset="50%" text-anchor="middle">приглашаем на свадьбу</textPath></text>
+          </svg>
+        </div>
+
+        <div class="hero-row" aria-label="Дата и детские фотографии Александра и Ксении">
+          <figure class="person groom">
+            <figcaption class="vertical-name">александр</figcaption>
+            <img src="assets/groom.png" alt="Детская фотография Александра" />
+          </figure>
+
+          <div class="date-wrap" aria-label="Дата свадьбы 23.07.2026">
+            <svg class="arc-text arc-date" viewBox="0 0 620 118" role="img" aria-label="23.07.2026">
+              <path id="dateArc" d="M88 20 Q310 108 532 20" />
+              <text><textPath href="#dateArc" startOffset="50%" text-anchor="middle">23.07.2026</textPath></text>
+            </svg>
+          </div>
+
+          <figure class="person bride">
+            <figcaption class="vertical-name">ксения</figcaption>
+            <img src="assets/bride.png" alt="Детская фотография Ксении" />
+          </figure>
+        </div>
+
+        <div class="countdown-wrap" aria-label="Таймер до свадьбы">
+          <svg class="arc-text arc-countdown" viewBox="0 0 620 120" role="img" aria-label="Таймер до свадьбы">
+            <path id="countdownArc" d="M84 86 Q310 26 536 86" />
+            <text>
+                <textPath href="#countdownArc" startOffset="50%" text-anchor="middle">
+                    <tspan class="count-value" data-days>0</tspan><tspan class="count-label"> дней </tspan>
+                    <tspan class="count-value" data-hours>00</tspan><tspan class="count-label"> часов </tspan>
+                    <tspan class="count-value" data-minutes>00</tspan><tspan class="count-label"> минут</tspan>
+                </textPath>
+            </text>
+          </svg>
+        </div>
+      </section>
+    </article>
+
+    <section class="below-info" aria-label="Расписание и детали свадьбы">
+      <p class="below-title">детали дня</p>
+
+      <div class="schedule" aria-label="Расписание свадьбы">
+          <div class="line-item">
+              <span class="time">13.50–14.20</span>
+              <span class="place">роспись · РАГС Петродворцового района</span>
+              <a href="https://yandex.ru/maps/?text=%D0%A0%D0%90%D0%93%D0%A1%20%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B4%D0%B2%D0%BE%D1%80%D1%86%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%B0" target="_blank" rel="noopener">карта</a>
+          </div>
+
+          <div class="line-item">
+              <span class="time">15.00–16.00</span>
+              <span class="place">фуршет · возле Гранд Петергофа</span>
+              <a href="https://yandex.ru/maps/?text=%D0%93%D1%80%D0%B0%D0%BD%D0%B4%20%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%20%D0%BE%D1%82%D0%B5%D0%BB%D1%8C" target="_blank" rel="noopener">карта</a>
+          </div>
+
+          <div class="line-item">
+              <span class="time">16.00–21.00</span>
+              <span class="place">мероприятие · шатер Гранд Петергоф</span>
+              <a href="https://yandex.ru/maps/?text=%D0%93%D1%80%D0%B0%D0%BD%D0%B4%20%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B3%D0%BE%D1%84%20%D1%88%D0%B0%D1%82%D0%B5%D1%80" target="_blank" rel="noopener">карта</a>
+          </div>
+      </div>
+
+      <div class="soft-notes" aria-label="Дополнительно">
+        <p><b>дресс-кода нет:</b> приходите в том, в чем вам радостно</p>
+        <p><b>про подарки:</b> будем благодарны за вклад в семейную копилку ♡</p>
+      </div>
+
+      <a class="calendar" href="wedding.ics" download>добавить в календарь</a>
+
+      <section class="menu-card" aria-label="Выбор меню для гостей">
+        <p class="below-title menu-title">выбор меню</p>
+        <p class="menu-intro">пожалуйста, отметьте блюда, которые вам больше всего подходят. один человек — одна заполненная форма.</p>
+
+        <form class="food-form" id="foodForm" novalidate>
+          <div class="guest-fields">
+            <label class="text-field">
+              <span>ваше имя</span>
+              <input type="text" name="guestName" autocomplete="name" placeholder="например, анна" required />
+            </label>
+
+            <label class="text-field">
+              <span>контакт для уточнений</span>
+              <input type="text" name="guestContact" autocomplete="tel" placeholder="телефон или telegram, можно не заполнять" />
+            </label>
+          </div>
+
+          <fieldset class="choice-section" data-choice-group="salads" data-min="1" data-max="3" data-label="салаты">
+            <legend>салаты <span>выберите до 3 вариантов</span></legend>
+            <div class="choice-grid">
+              <label class="choice-pill"><input type="checkbox" name="salads" value="цезарь с куриным филе"><span>цезарь с куриным филе <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="salads" value="столичный салат"><span>столичный салат <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="salads" value="салат с моцареллой"><span>салат с моцареллой <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="salads" value="шопский салат"><span>шопский салат <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="salads" value="салат с кальмаром и овощами"><span>салат с кальмаром и овощами <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="salads" value="салат с языком и хреном"><span>салат с языком и хреном <small>75 г</small></span></label>
+            </div>
+            <p class="choice-note" data-choice-note>можно выбрать 1–3 позиции</p>
+          </fieldset>
+
+          <fieldset class="choice-section" data-choice-group="vegetables" data-min="2" data-max="2" data-label="овощные холодные закуски">
+            <legend>овощные холодные закуски <span>выберите 2 варианта</span></legend>
+            <div class="choice-grid">
+              <label class="choice-pill"><input type="checkbox" name="vegetables" value="домашние соленья"><span>домашние соленья <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="vegetables" value="овощи свежие"><span>овощи свежие <small>75 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="vegetables" value="пхали из свёклы"><span>пхали из свёклы <small>60 г</small></span></label>
+            </div>
+            <p class="choice-note" data-choice-note>нужно выбрать ровно 2 позиции</p>
+          </fieldset>
+
+          <fieldset class="choice-section" data-choice-group="fish" data-min="2" data-max="2" data-label="рыбные холодные закуски">
+            <legend>рыбные холодные закуски <span>выберите 2 варианта</span></legend>
+            <div class="choice-grid">
+              <label class="choice-pill"><input type="checkbox" name="fish" value="сельдь с картофелем"><span>сельдь с картофелем <small>40/40/20 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="fish" value="рулетики из форели с творожным сыром"><span>рулетики из форели с творожным сыром <small>30 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="fish" value="тапас с муссом из форели и тартаром из огурца"><span>тапас с муссом из форели и тартаром из огурца <small>25 г</small></span></label>
+            </div>
+            <p class="choice-note" data-choice-note>нужно выбрать ровно 2 позиции</p>
+          </fieldset>
+
+          <fieldset class="choice-section" data-choice-group="meat" data-min="2" data-max="2" data-label="мясные холодные закуски">
+            <legend>мясные холодные закуски <span>выберите 2 варианта</span></legend>
+            <div class="choice-grid">
+              <label class="choice-pill"><input type="checkbox" name="meat" value="галантин из цыпленка"><span>галантин из цыпленка <small>30 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="meat" value="рулетики из ветчины с творожным сыром"><span>рулетики из ветчины с творожным сыром <small>35 г</small></span></label>
+              <label class="choice-pill"><input type="checkbox" name="meat" value="язык с хреном"><span>язык с хреном <small>30/2 г</small></span></label>
+            </div>
+            <p class="choice-note" data-choice-note>нужно выбрать ровно 2 позиции</p>
+          </fieldset>
+
+          <fieldset class="choice-section radio-section" data-radio-group="hotSnack" data-label="горячая закуска">
+            <legend>горячая закуска <span>выберите 1 вариант</span></legend>
+            <div class="choice-grid">
+              <label class="choice-pill"><input type="radio" name="hotSnack" value="жульен куриный" required><span>жульен куриный <small>1/90 г</small></span></label>
+              <label class="choice-pill"><input type="radio" name="hotSnack" value="жульен грибной"><span>жульен грибной <small>1/90 г</small></span></label>
+              <label class="choice-pill"><input type="radio" name="hotSnack" value="драники с тар-таром из форели со сметаной"><span>драники с тар-таром из форели со сметаной <small>80/30/30 г</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-section radio-section" data-radio-group="mainCourse" data-label="горячее">
+            <legend>горячее <span>выберите 1 вариант</span></legend>
+            <div class="choice-grid">
+              <label class="choice-pill"><input type="radio" name="mainCourse" value="судак жареный с картофельным пюре и соусом бешамель" required><span>судак жареный с картофельным пюре и соусом бешамель <small>110/120/60 г</small></span></label>
+              <label class="choice-pill"><input type="radio" name="mainCourse" value="горячая буженина с печеными овощами и горчичным соусом"><span>горячая буженина с печеными овощами и горчичным соусом <small>130/100/50 г</small></span></label>
+              <label class="choice-pill"><input type="radio" name="mainCourse" value="стейк из индейки под соусом демиглас с картофелем стоун"><span>стейк из индейки под соусом демиглас с картофелем стоун <small>130/100/30 г</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-section radio-section" data-radio-group="drink" data-label="чай или кофе">
+            <legend>чай или кофе <span>выберите 1 вариант</span></legend>
+            <div class="choice-grid compact-grid">
+              <label class="choice-pill"><input type="radio" name="drink" value="чай" required><span>чай</span></label>
+              <label class="choice-pill"><input type="radio" name="drink" value="кофе"><span>кофе</span></label>
+              <label class="choice-pill"><input type="radio" name="drink" value="решу на месте"><span>решу на месте</span></label>
+            </div>
+            <p class="choice-note">фрукты, морс 250 мл, хлеб и масло уже включены в меню</p>
+          </fieldset>
+
+          <label class="text-field full-field">
+            <span>аллергии или важный комментарий</span>
+            <textarea name="comment" rows="3" placeholder="например, не ем рыбу / аллергия на орехи"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="save-button" type="submit">сохранить выбор</button>
+          </div>
+
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

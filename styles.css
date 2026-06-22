@@ -1,0 +1,907 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --page: #ecebea;
+  --paper: #fffdf8;
+  --aqua: #39a8ba;
+  --aqua-deep: #1f7e94;
+  --rose: #c76f87;
+  --green: #639b5a;
+  --green-deep: #2f6d43;
+  --orange: #e58c2f;
+  --moon-yellow: #f5c24a;
+  --soft-orange: #f2b84b;
+  --text: #665b51;
+  --muted: #918277;
+  --line: rgba(75, 143, 154, .22);
+  --panel: rgba(255, 253, 248, .80);
+  --shadow: rgba(92, 73, 65, .14);
+  --arc-script-size: clamp(18px, 3.1vw, 30px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page);
+  color: var(--text);
+  font-family: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+}
+
+.page {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: clamp(14px, 4vw, 42px) 12px 48px;
+}
+
+.invite {
+  position: relative;
+  width: min(100%, 760px);
+  height: clamp(900px, 125vw, 960px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: 0 22px 50px var(--shadow);
+}
+
+.invite-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/background-frame.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.content {
+  position: absolute;
+  z-index: 2;
+  top: 7.0%;
+  left: 10%;
+  right: 10%;
+  bottom: 34%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  inset: -20px -4px -8px;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(255, 253, 248, .66) 0%, rgba(255, 253, 248, .45) 58%, rgba(255, 253, 248, 0) 78%);
+  pointer-events: none;
+}
+
+.top-copy {
+  width: min(100%, 620px);
+  margin: 0 auto clamp(6px, 1.4vw, 14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arc-text {
+  display: block;
+  width: min(100%, 620px);
+  overflow: visible;
+  margin-top:-15px;
+}
+
+.arc-text path {
+  fill: none;
+  stroke: none;
+}
+
+.arc-text text {
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-weight: 900;
+  line-height: 1;
+  paint-order: stroke fill;
+}
+
+.arc-overline {
+  height: clamp(82px, 11vw, 112px);
+  margin-bottom: 0;
+}
+
+.arc-overline text {
+  fill: var(--aqua-deep);
+  stroke: rgba(255, 253, 248, .50);
+  stroke-width: 3px;
+  font-size: var(--arc-script-size);
+  letter-spacing: .28em;
+}
+
+.hero-row {
+  width: min(100%, 660px);
+  margin: clamp(-18px, -1.8vw, -6px) auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 190px) minmax(0, 1fr);
+  align-items: end;
+  column-gap: 0px;
+  padding-bottom: clamp(2px, .6vw, 8px);
+}
+
+.date-wrap {
+  align-self: start;
+  width: 100%;
+  padding-top: clamp(22px, 3vw, 34px);
+}
+
+.arc-date {
+  width: 100%;
+  height: clamp(82px, 11vw, 112px);
+  margin: 0;
+  margin-top:-5px;
+}
+
+.arc-date text {
+  fill: var(--moon-yellow);
+  stroke: rgba(255, 253, 248, .62);
+  stroke-width: 3px;
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(75px, 4.2vw, 46px);
+  font-weight: 900;
+  letter-spacing: .24em;
+}
+
+.couple { display: contents; }
+
+h1 { display: none; }
+
+.couple {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(2px, .5vw, 8px);
+  width: 100%;
+  margin: clamp(-34px, -3vw, -16px) 0 0;
+  padding-top: 0;
+  padding-bottom: clamp(4px, .8vw, 10px);
+}
+
+.person {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0px;
+  padding-top: clamp(18px, 2.6vw, 30px);
+}
+
+.person img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: clamp(320px, 45vw, 410px);
+  margin: 0 auto;
+  object-fit: contain;
+  filter: none;
+}
+
+.groom img {
+  filter: drop-shadow(8px 8px 0 rgba(31, 126, 148, .28));
+  transform: translateY(45px) scale(1.5);
+}
+
+.bride img {
+  filter: drop-shadow(8px 8px 0 rgba(199, 111, 135, .28));
+  transform: translateY(40px) scale(1.2);
+}
+
+.person figcaption {
+  position: static;
+  margin: 0;
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(28px, 3.15vw, 38px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.vertical-name {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  white-space: nowrap;
+  letter-spacing: -0.5em;
+  min-height: clamp(250px, 35vw, 332px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.groom {
+  justify-self: end;
+  margin-right: -44px;
+}
+
+.bride {
+  justify-self: start;
+  margin-left: -60px;
+}
+
+.groom figcaption {
+  order: 1;
+  color: var(--aqua-deep);
+  transform: translateY(-25px) translateX(-10px);
+  margin-left: 40px;
+  margin-right: -25px;
+}
+
+.bride figcaption {
+    order: -1;
+    color: var(--rose);
+    transform: translateY(-25px) translateX(10px);
+    margin-right: 60px;
+    margin-left: -25px;
+}
+
+.countdown-wrap {
+  width: min(100%, 620px);
+  margin: clamp(-2px, .7vw, 8px) 0 0;
+}
+
+.arc-countdown {
+  height: clamp(70px, 10vw, 60px);
+}
+
+.arc-countdown text {
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(45px, 2.75vw, 28px);
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.arc-countdown .count-value {
+  fill: var(--aqua-deep);
+  font-weight: 900;
+}
+
+.arc-countdown .count-label {
+  fill: #242424;
+  font-weight: 400;
+}
+
+.below-info {
+  width: min(100%, 760px);
+  margin: 18px auto 0;
+  padding: 24px clamp(18px, 4vw, 34px) 26px;
+  background:
+    radial-gradient(circle at 22% 0%, rgba(232, 189, 106, .10), transparent 18rem),
+    radial-gradient(circle at 84% 100%, rgba(75, 143, 154, .10), transparent 16rem),
+    repeating-linear-gradient(0deg, rgba(145, 120, 100, 0.025) 0 1px, transparent 1px 8px),
+    #fffdf8;
+  border: 1px solid rgba(145, 120, 100, .15);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(92, 73, 65, .08);
+  text-align: center;
+}
+
+.below-title {
+  margin: 0 0 16px;
+  color: var(--green-deep);
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1;
+}
+
+.schedule {
+  width: min(100%, 620px);
+  margin: 0 auto 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 253, 248, .64);
+}
+
+.line-item {
+  display: grid;
+  grid-template-columns: 104px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 2px;
+  font-size: clamp(14px, 1.9vw, 17px);
+  line-height: 1.28;
+  text-align: left;
+}
+
+.line-item + .line-item {
+  border-top: 1px dashed rgba(75, 143, 154, .25);
+}
+
+.time {
+  color: var(--aqua-deep);
+  font-family: "Nunito", system-ui, sans-serif;
+  font-weight: 700;
+  text-align: right;
+  letter-spacing: .02em;
+}
+
+.place { color: var(--text); }
+
+.line-item a,
+.calendar {
+  color: var(--rose);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(183, 114, 121, .38);
+}
+
+.line-item a:hover,
+.line-item a:focus-visible,
+.calendar:hover,
+.calendar:focus-visible {
+  color: var(--orange);
+  outline: none;
+}
+
+.soft-notes {
+  width: min(100%, 600px);
+  margin: 0 auto 12px;
+  color: var(--text);
+  font-size: clamp(14px, 1.9vw, 17px);
+  line-height: 1.48;
+}
+
+.soft-notes p {
+  margin: 5px 0;
+}
+
+.soft-notes b { color: var(--green-deep); }
+
+.calendar {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 4px;
+  padding: 0;
+  color: var(--rose);
+  font-size: clamp(14px, 1.9vw, 17px);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(183, 114, 121, .38);
+}
+
+@media (max-width: 700px) {
+  .invite { height: 920px; }
+  .content {
+    top: 6.8%;
+    left: 7%;
+    right: 7%;
+    bottom: 34%;
+  }
+  .content::before { inset: -14px -2px -2px; }
+  .arc-overline { height: 56px; }
+  .hero-row {
+    grid-template-columns: 1fr 156px 1fr;
+    margin-top: -14px;
+    column-gap: 2px;
+  }
+  .date-wrap { padding-top: 12px; }
+  .arc-date { height: 72px; }
+  .person img { height: clamp(288px, 52vw, 354px); }
+  .person { padding-top: 18px; }
+  .groom { margin-right: -44px; }
+  .bride { margin-left: -44px; }
+  .vertical-name { min-height: clamp(238px, 46vw, 304px); }
+  .countdown-wrap { margin-top: 2px; }
+  .arc-countdown { height: 68px; }
+  .arc-countdown text { font-size: 21px; }
+}
+
+@media (max-width: 520px) {
+  .page { padding: 0 0 24px; }
+
+  .invite {
+    width: min(100%, 430px);
+    height: auto;
+    aspect-ratio: 1006 / 1564;
+    border-radius: 0;
+    box-shadow: 0 12px 28px rgba(92, 73, 65, .10);
+  }
+
+  .invite-bg {
+    background-image: url("assets/background-frame-mobile.jpg"), url("assets/background-frame.jpg");
+    background-size: 100% 100%, 100% 100%;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .content {
+    inset: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .content::before {
+    inset: 11% 10% 41%;
+    background: radial-gradient(ellipse at center, rgba(255, 253, 248, .50) 0%, rgba(255, 253, 248, .28) 58%, rgba(255, 253, 248, 0) 79%);
+  }
+
+  .top-copy {
+    position: absolute;
+    top: 7.1%;
+    left: 14%;
+    right: 14%;
+    width: auto;
+    margin: 0;
+  }
+
+  .arc-overline {
+    width: 100%;
+    height: 58px;
+    margin: 0;
+    transform: translate(8px, -10px);
+  }
+
+  .arc-overline text {
+    font-size: 32px;
+    letter-spacing: .23em;
+    stroke-width: 2px;
+  }
+
+  .hero-row {
+    position: absolute;
+    top: 13.2%;
+    left: 6.5%;
+    right: 6.5%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 104px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 0;
+  }
+
+  .date-wrap {
+    grid-column: 2;
+    grid-row: 1;
+    width: 150px;
+    justify-self: center;
+    align-self: start;
+    padding: 0;
+    margin: 0 -23px;
+    transform: translateY(6px);
+    z-index: 4;
+  }
+
+  .arc-date {
+    width: 100%;
+    height: 84px;
+    margin: 0;
+    transform: translate(8px, 15px);
+  }
+
+  .arc-date text {
+    font-size: 80px;
+    letter-spacing: .22em;
+    stroke-width: 2px;
+  }
+
+  .top-copy { margin-bottom: 0; }
+
+  .person {
+    width: 100%;
+    margin: 0;
+    padding-top: 76px;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .person img {
+    height: clamp(216px, 58vw, 268px);
+    max-width: none;
+    transform-origin: center top;
+  }
+
+  .person figcaption {
+    font-size: clamp(28px, 7.8vw, 34px);
+    line-height: .92;
+    z-index: 5;
+  }
+
+  .groom {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin: 0;
+    transform: translate(40px, -15px);
+  }
+
+  .bride {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    margin: 0;
+    transform: translate(-25px, -20px);
+  }
+
+  .groom img {
+    transform: translateY(-37px) scale(1.25);
+  }
+
+  .bride img {
+    transform: translateY(-25px) scale(1.25);
+  }
+
+  .groom figcaption {
+    order: 1;
+    margin-left: 6px;
+    margin-right: -9px;
+    transform: translateY(2px) translateX(-20px);
+  }
+
+  .bride figcaption {
+    order: -1;
+    margin-left: -10px;
+    margin-right: 4px;
+    transform: translateY(4px) translateX(-10px);
+  }
+
+  .vertical-name {
+    min-height: clamp(214px, 55vw, 252px);
+    letter-spacing: -0.5em;
+  }
+
+  .countdown-wrap {
+    position: absolute;
+    top: 48.3%;
+    left: 15%;
+    right: 15%;
+    width: auto;
+    margin: 0;
+    z-index: 6;
+  }
+
+  .arc-countdown {
+    width: 100%;
+    height: 62px;
+    transform: translateY(95px) translateX(10px);
+  }
+
+  .arc-countdown text {
+    font-size: clamp(42px, 6.1vw, 26px);
+    letter-spacing: .005em;
+  }
+
+  .line-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    text-align: center;
+    padding: 9px 0;
+  }
+  .time { text-align: center; }
+}
+.line-item a {
+    justify-self: center;
+    width: fit-content;
+    display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+.menu-card {
+  width: min(100%, 660px);
+  margin: 28px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.menu-title {
+  margin-bottom: 8px;
+}
+
+.menu-intro {
+  width: min(100%, 560px);
+  margin: 0 auto 18px;
+  color: var(--muted);
+  font-size: clamp(14px, 1.9vw, 16px);
+  line-height: 1.45;
+}
+
+.food-form {
+  text-align: left;
+}
+
+.guest-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.text-field {
+  display: grid;
+  gap: 6px;
+  color: var(--green-deep);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: lowercase;
+}
+
+.text-field input,
+.text-field textarea {
+  width: 100%;
+  border: 1px solid rgba(75, 143, 154, .26);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, .82);
+  color: var(--text);
+  font: 600 15px/1.35 "Nunito", system-ui, sans-serif;
+  padding: 11px 12px;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.text-field textarea {
+  resize: vertical;
+  min-height: 82px;
+}
+
+.text-field input:focus,
+.text-field textarea:focus {
+  border-color: rgba(31, 126, 148, .55);
+  background: rgba(255, 253, 248, .98);
+  box-shadow: 0 0 0 4px rgba(57, 168, 186, .10);
+}
+
+.full-field {
+  margin-top: 14px;
+}
+
+.choice-section {
+  margin: 14px 0;
+  padding: 14px;
+  border: 1px solid rgba(145, 120, 100, .16);
+  border-radius: 18px;
+  background: rgba(255, 253, 248, .64);
+}
+
+.choice-section legend {
+  padding: 0 8px;
+  color: var(--green-deep);
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: clamp(22px, 3.2vw, 28px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.choice-section legend span {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--muted);
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.compact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.choice-pill {
+  position: relative;
+  min-height: 48px;
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+}
+
+.choice-pill input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice-pill span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 11px;
+  border: 1px solid rgba(75, 143, 154, .20);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .52);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.22;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.choice-pill small {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.choice-pill:hover span,
+.choice-pill input:focus-visible + span {
+  border-color: rgba(31, 126, 148, .42);
+  box-shadow: 0 7px 18px rgba(92, 73, 65, .07);
+  transform: translateY(-1px);
+}
+
+.choice-pill input:checked + span {
+  border-color: rgba(31, 126, 148, .56);
+  background: rgba(57, 168, 186, .10);
+  box-shadow: inset 0 0 0 1px rgba(31, 126, 148, .12);
+}
+
+.choice-pill input:checked + span::before {
+  content: "♡";
+  flex: 0 0 auto;
+  color: var(--rose);
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.compact-grid .choice-pill span {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.compact-grid .choice-pill input:checked + span {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+    .compact-grid .choice-pill input:checked + span::before {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+.radio-section .choice-pill input:checked + span {
+  background: rgba(199, 111, 135, .10);
+  border-color: rgba(199, 111, 135, .46);
+}
+
+.choice-note {
+  margin: 8px 2px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.choice-note.is-error,
+.form-status.is-error {
+  color: #a74747;
+}
+
+.form-status.is-success {
+  color: var(--green-deep);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.save-button,
+.light-button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 12px 16px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.save-button {
+  background: var(--aqua-deep);
+  color: #fffdf8;
+  box-shadow: 0 10px 20px rgba(31, 126, 148, .18);
+}
+
+.light-button {
+  background: rgba(255, 253, 248, .88);
+  color: var(--rose);
+  border: 1px solid rgba(199, 111, 135, .28);
+}
+
+.save-button:hover,
+.save-button:focus-visible,
+.light-button:hover,
+.light-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(92, 73, 65, .10);
+  outline: none;
+}
+
+.form-status {
+  min-height: 20px;
+  margin: 12px auto 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.selection-summary {
+  width: 100%;
+  margin: 12px 0 0;
+  padding: 12px;
+  border: 1px dashed rgba(75, 143, 154, .28);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, .74);
+  color: var(--text);
+  font: 600 13px/1.45 "Nunito", system-ui, sans-serif;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .guest-fields,
+  .choice-grid,
+  .compact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-section {
+    padding: 12px 10px;
+  }
+
+  .choice-section legend span {
+    display: block;
+    margin: 4px 0 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .menu-card {
+    margin-top: 24px;
+    padding-top: 18px;
+  }
+
+  .choice-pill span {
+    font-size: 13px;
+  }
+
+  .form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .save-button,
+  .light-button {
+    width: 100%;
+  }
+}
+

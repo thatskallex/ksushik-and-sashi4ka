@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ksenia Alexander Wedding//Invite//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ksenia-alexander-wedding-20260723@example.local
+DTSTAMP:20260621T000000Z
+DTSTART:20260723T105000Z
+DTEND:20260723T180000Z
+SUMMARY:Свадьба Ксении и Александра
+LOCATION:РАГС Петродворцового района; Гранд Петергоф отель
+DESCRIPTION:13:50–14:20 — роспись в РАГС Петродворцового района; 15:00–16:00 — фуршет возле Гранд Петергофа; 16:00–21:00 — мероприятие в шатре Гранд Петергоф.
+END:VEVENT
+END:VCALENDAR
