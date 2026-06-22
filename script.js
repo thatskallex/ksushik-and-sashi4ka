@@ -26,6 +26,31 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+const googleCalendarLink = document.querySelector('#googleCalendarLink');
+
+if (googleCalendarLink) {
+    const title = 'Свадьба Ксении и Александра';
+    const start = '20260723T105000Z';
+    const end = '20260723T180000Z';
+    const location = 'РАГС Петродворцового района; Гранд Петергоф отель';
+    const details = [
+        '13:50–14:20 — роспись в РАГС Петродворцового района',
+        '15:00–16:00 — фуршет возле Гранд Петергофа',
+        '16:00–21:00 — мероприятие в шатре Гранд Петергоф'
+    ].join('\n');
+
+    const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: title,
+        dates: `${start}/${end}`,
+        details,
+        location
+    });
+
+    googleCalendarLink.href = `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyJUtF8oKLD_HIS2bqXMeFQJtKo2G-p_gw7OSM8kxF364YkU3pCL9HjMgUG0A5GB_GCIw/exec'; // сюда можно вставить ссылку Google Apps Script, если захотите сохранять ответы в Google Таблицу
 const foodForm = document.querySelector('#foodForm');
 const formStatus = document.querySelector('[data-form-status]');

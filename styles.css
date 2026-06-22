@@ -388,7 +388,7 @@ h1 { display: none; }
   .person { padding-top: 18px; }
   .groom { margin-right: -44px; }
   .bride { margin-left: -44px; }
-  .vertical-name { min-height: clamp(238px, 46vw, 304px); }
+  .vertical-name { min-height: clamp(238px, 46vw, 304px);  letter-spacing: 0em;}
   .countdown-wrap { margin-top: 2px; }
   .arc-countdown { height: 68px; }
   .arc-countdown text { font-size: 21px; }
@@ -905,3 +905,22 @@ h1 { display: none; }
   }
 }
 
+.calendar-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+    margin-top: 8px;
+}
+
+    .calendar-actions .calendar {
+        padding: 0;
+    }
+
+@media (max-width: 460px) {
+    .calendar-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+}

@@ -1,23 +1,21 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f6f2ee" />
-    <title>ксюшичка и сашечка</title>
-    <meta name="description" content="Свадебное приглашение Ксении и Александра — 23.07.2026" />
-
-    <link rel="icon" href="assets/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/site.webmanifest" />
-
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f2ee" />
+  <title>Ксения и Александр — приглашение</title>
+  <meta name="description" content="Свадебное приглашение Ксении и Александра — 23.07.2026" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="page">
-    <article class="invite" aria-label="свадебное приглашение от ксении и александра">
+    <article class="invite" aria-label="Свадебное приглашение Ксении и Александра">
       <div class="invite-bg" aria-hidden="true"></div>
 
       <section class="content" aria-label="Основная информация">
@@ -30,9 +28,7 @@
 
         <div class="hero-row" aria-label="Дата и детские фотографии Александра и Ксении">
           <figure class="person groom">
-              <figcaption class="vertical-name" aria-label="александр">
-                  <span>а</span><span>л</span><span>е</span><span>к</span><span>с</span><span>а</span><span>н</span><span>д</span><span>р</span>
-              </figcaption>
+            <figcaption class="vertical-name">александр</figcaption>
             <img src="assets/groom.png" alt="Детская фотография Александра" />
           </figure>
 
@@ -44,9 +40,7 @@
           </div>
 
           <figure class="person bride">
-              <figcaption class="vertical-name" aria-label="ксения">
-                  <span>к</span><span>с</span><span>е</span><span>н</span><span>и</span><span>я</span>
-              </figcaption>
+            <figcaption class="vertical-name">ксения</figcaption>
             <img src="assets/bride.png" alt="Детская фотография Ксении" />
           </figure>
         </div>
@@ -94,15 +88,7 @@
         <p><b>про подарки:</b> будем благодарны за вклад в семейную копилку ♡</p>
       </div>
 
-      <div class="calendar-actions" aria-label="Добавление свадьбы в календарь">
-          <a class="calendar" id="googleCalendarLink" href="#" target="_blank" rel="noopener">
-              добавить в гугл календарь
-          </a>
-
-          <a class="calendar" href="wedding.ics" type="text/calendar">
-              добавить в эпл календарь
-          </a>
-      </div>
+      <a class="calendar" href="wedding.ics" download>добавить в календарь</a>
 
       <section class="menu-card" aria-label="Выбор меню для гостей">
         <p class="below-title menu-title">выбор меню</p>
@@ -112,12 +98,12 @@
           <div class="guest-fields">
             <label class="text-field">
               <span>ваше имя</span>
-              <input type="text" name="guestName" autocomplete="name" placeholder="например, ксюшик" required />
+              <input type="text" name="guestName" autocomplete="name" placeholder="например, анна" required />
             </label>
 
             <label class="text-field">
               <span>контакт для уточнений</span>
-              <input type="text" name="guestContact" autocomplete="tel" placeholder="телефон, можно не заполнять" />
+              <input type="text" name="guestContact" autocomplete="tel" placeholder="телефон или telegram, можно не заполнять" />
             </label>
           </div>
 
@@ -194,14 +180,17 @@
 
           <label class="text-field full-field">
             <span>аллергии или важный комментарий</span>
-            <textarea name="comment" rows="3" placeholder="например, не люблю грибы"></textarea>
+            <textarea name="comment" rows="3" placeholder="например, не ем рыбу / аллергия на орехи"></textarea>
           </label>
 
           <div class="form-actions">
             <button class="save-button" type="submit">сохранить выбор</button>
+            <button class="light-button" type="button" data-copy-selection>скопировать текст</button>
+            <button class="light-button" type="button" data-download-selection>скачать .txt</button>
           </div>
 
           <p class="form-status" data-form-status aria-live="polite"></p>
+          <pre class="selection-summary" data-selection-summary hidden></pre>
         </form>
       </section>
     </section>
