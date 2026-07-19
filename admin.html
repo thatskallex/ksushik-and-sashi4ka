@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#f6f2ee" />
+  <title>управление фотоплёнками</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+  <main class="admin-page">
+    <header class="admin-header">
+      <span class="admin-kicker">ксения + александр</span>
+      <h1>управление фотоплёнками</h1>
+      <p>добавляйте гостям кадры по четырёхзначному коду или создавайте одноразовые дополнительные плёнки.</p>
+    </header>
+
+    <section class="admin-card" data-login-card>
+      <h2>вход организатора</h2>
+      <form class="admin-login-form" data-admin-login>
+        <label>
+          <span>пароль администратора</span>
+          <input type="password" data-admin-password autocomplete="current-password" required />
+        </label>
+        <button type="submit">войти</button>
+      </form>
+      <p class="admin-status" data-login-status aria-live="polite"></p>
+    </section>
+
+    <section class="admin-dashboard" data-admin-dashboard hidden>
+      <div class="admin-toolbar">
+        <span>доступ подтверждён</span>
+        <button type="button" class="admin-text-button" data-admin-logout>выйти</button>
+      </div>
+
+      <section class="admin-card">
+        <h2>найти плёнку гостя</h2>
+        <form class="admin-search-form" data-device-search>
+          <label>
+            <span>четырёхзначный код</span>
+            <input type="text" data-device-search-input inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="4827" required />
+          </label>
+          <button type="submit">найти</button>
+        </form>
+        <p class="admin-status" data-search-status aria-live="polite"></p>
+      </section>
+
+      <section class="admin-card admin-device-card" data-device-card hidden>
+        <div class="admin-device-heading">
+          <div>
+            <span>код плёнки</span>
+            <strong data-admin-device-code>----</strong>
+          </div>
+          <p data-admin-device-name>анонимный гость</p>
+        </div>
+
+        <div class="admin-stats">
+          <article><strong data-admin-used>0</strong><span>использовано</span></article>
+          <article><strong data-admin-bonus>0</strong><span>бонусных</span></article>
+          <article><strong data-admin-remaining>21</strong><span>осталось</span></article>
+        </div>
+
+        <div class="admin-grant-buttons" aria-label="Добавить кадры">
+          <button type="button" data-grant-frames="6">+6 кадров</button>
+          <button type="button" data-grant-frames="12">+12 кадров</button>
+          <button type="button" data-grant-frames="24">+24 кадра</button>
+        </div>
+
+        <details class="admin-danger-zone">
+          <summary>служебные действия</summary>
+          <div>
+            <button type="button" data-reset-used>сбросить использованные кадры</button>
+            <button type="button" data-reset-all>вернуть к основной плёнке из 21 кадра</button>
+          </div>
+        </details>
+
+        <p class="admin-status" data-device-status aria-live="polite"></p>
+        <div class="admin-history" data-device-history></div>
+      </section>
+
+      <section class="admin-card">
+        <h2>одноразовая плёнка</h2>
+        <p class="admin-card-copy">создайте код и передайте его гостю. после первой активации код больше не сработает.</p>
+        <form class="admin-code-form" data-create-code>
+          <label>
+            <span>сколько кадров</span>
+            <select data-code-frames>
+              <option value="6">6 кадров</option>
+              <option value="12" selected>12 кадров</option>
+              <option value="24">24 кадра</option>
+            </select>
+          </label>
+          <button type="submit">создать код</button>
+        </form>
+        <div class="admin-generated-code" data-generated-code hidden>
+          <span>новая плёнка</span>
+          <strong data-generated-code-value>FILM-XXXXXX</strong>
+          <button type="button" data-copy-code>скопировать</button>
+        </div>
+        <p class="admin-status" data-code-status aria-live="polite"></p>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-section-heading">
+          <h2>последняя активность</h2>
+          <button type="button" class="admin-text-button" data-refresh-recent>обновить</button>
+        </div>
+        <div class="admin-recent-list" data-recent-devices></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

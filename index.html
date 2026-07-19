@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f6f2ee" />
     <title>ксюшичка и сашечка</title>
-    <meta name="description" content="cвадебное приглашение ксении и александра на 23.07.2026" />
+    <meta name="description" content="свадебный день ксении и александра: расписание, рассадка и общая фотопленка" />
 
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
@@ -17,14 +17,14 @@
 </head>
 <body>
   <main class="page">
-    <article class="invite" aria-label="свадебное приглашение от ксении и александра">
+    <article class="invite" aria-label="свадебный день ксении и александра">
       <div class="invite-bg" aria-hidden="true"></div>
 
       <section class="content" aria-label="Основная информация">
-        <div class="top-copy" aria-label="Приглашение на свадьбу">
-          <svg class="arc-text arc-overline" viewBox="0 0 620 92" role="img" aria-label="приглашаем на свадьбу">
+        <div class="top-copy" aria-label="Статус свадебного дня">
+          <svg class="arc-text arc-overline" viewBox="0 0 620 92" role="img" aria-label="Статус свадебного дня">
             <path id="inviteArc" d="M94 58 Q310 18 526 58" />
-            <text><textPath href="#inviteArc" startOffset="50%" text-anchor="middle">приглашаем на свадьбу</textPath></text>
+            <text><textPath href="#inviteArc" startOffset="50%" text-anchor="middle" data-live-heading>скоро наш день</textPath></text>
           </svg>
         </div>
 
@@ -51,22 +51,23 @@
           </figure>
         </div>
 
-        <div class="countdown-wrap" aria-label="Таймер до свадьбы">
-          <svg class="arc-text arc-countdown" viewBox="0 0 620 120" role="img" aria-label="Таймер до свадьбы">
-            <path id="countdownArc" d="M84 86 Q310 26 536 86" />
+        <div class="day-status-wrap" aria-live="polite">
+          <svg class="arc-text arc-day-status" viewBox="0 0 620 120" role="img" aria-label="Текущий статус свадебного дня">
+            <path id="dayStatusArc" d="M8 90 Q310 8 612 90" />
             <text>
-                <textPath href="#countdownArc" startOffset="50%" text-anchor="middle">
-                    <tspan class="count-value" data-days>0</tspan><tspan class="count-label"> дней </tspan>
-                    <tspan class="count-value" data-hours>00</tspan><tspan class="count-label"> часов </tspan>
-                    <tspan class="count-value" data-minutes>00</tspan><tspan class="count-label"> минут</tspan>
-                </textPath>
+              <textPath href="#dayStatusArc" startOffset="50%" text-anchor="middle" data-live-status>загляните сюда 23 июля</textPath>
             </text>
           </svg>
+
+          <a class="scroll-hint" href="#dayDetails" data-scroll-hint>
+            <span>ниже расписание, рассадка и фотопленка</span>
+            <span class="scroll-hint-arrow" aria-hidden="true">⌄</span>
+          </a>
         </div>
       </section>
     </article>
 
-    <section class="below-info" aria-label="Расписание и детали свадьбы">
+    <section class="below-info" id="dayDetails" aria-label="Расписание и детали свадьбы">
       <p class="below-title">детали дня</p>
 
       <div class="schedule" aria-label="Расписание свадьбы">
@@ -104,108 +105,163 @@
           </a>
       </div>
 
-      <section class="menu-card" aria-label="Выбор меню для гостей">
-        <p class="below-title menu-title">выбор меню</p>
-        <p class="menu-intro">пожалуйста, отметьте блюда, которые вам больше всего подходят. один человек — одна заполненная форма.</p>
+      <section class="seating-card" aria-labelledby="seatingTitle">
+        <p class="below-title seating-title" id="seatingTitle">рассадка гостей</p>
+        <p class="seating-intro">найдите свое имя и номер стола</p>
 
-        <form class="food-form" id="foodForm" novalidate>
-          <div class="guest-fields">
-            <label class="text-field">
-              <span>ваше имя</span>
-              <input type="text" name="guestName" autocomplete="name" placeholder="например, ксюшик" required />
-            </label>
+        <div class="seating-grid">
+          <article class="guest-table" aria-labelledby="table1Title">
+            <h2 id="table1Title">стол 1</h2>
+            <ul>
+              <li>Еремеева Лариса</li>
+              <li>Пашковец Александр</li>
+              <li>Скрыльникова Валентина</li>
+              <li>Скрыльников Василий</li>
+              <li>Скрыльникова Екатерина</li>
+              <li>Татьяна Васильева</li>
+              <li>Харин Александр</li>
+              <li>Харина Алена</li>
+              <li>Харина Нина</li>
+            </ul>
+          </article>
 
-            <label class="text-field">
-              <span>контакт для уточнений</span>
-              <input type="text" name="guestContact" autocomplete="tel" placeholder="телефон, можно не заполнять" />
-            </label>
+          <article class="guest-table" aria-labelledby="table2Title">
+            <h2 id="table2Title">стол 2</h2>
+            <ul>
+              <li>Богомолов Константин</li>
+              <li>Богомолова Юлия</li>
+              <li>Еремеев Алексей</li>
+              <li>Еремеева Светлана</li>
+              <li>Канаева Татьяна</li>
+              <li>Матвеева Инна</li>
+              <li>Морозов Максим</li>
+              <li>Сильченко Евгений</li>
+            </ul>
+          </article>
+
+          <article class="guest-table" aria-labelledby="table3Title">
+            <h2 id="table3Title">стол 3</h2>
+            <ul>
+              <li>Богданова Аля</li>
+              <li>Еремеев Никита</li>
+              <li>Иванов Даня</li>
+              <li>Иванова Дарья</li>
+              <li>Скрыльникова Валентина</li>
+              <li>Харин Георгий</li>
+            </ul>
+          </article>
+
+          <article class="guest-table" aria-labelledby="table4Title">
+            <h2 id="table4Title">стол 4</h2>
+            <ul>
+              <li>Николаев Владислав</li>
+              <li>Резвова Лада</li>
+              <li>Салова Елизавета</li>
+              <li>Спасеннов Максим</li>
+              <li>Сапрыкина Арина</li>
+              <li>Шорина Анна</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="photo-card" id="guestPhotos" aria-labelledby="guestPhotosTitle">
+        <p class="below-title photo-title" id="guestPhotosTitle">свадьба вашими глазами</p>
+        <p class="photo-intro">помогите нам сохранить день таким, каким увидели его вы. вытяните задание, поймайте красивый момент и отправьте кадры в нашу общую фотопленку :3</p>
+
+        <div class="film-card">
+          <div class="film-strip film-strip-top" aria-hidden="true"></div>
+
+          <div class="film-heading">
+            <div>
+              <span class="film-eyebrow">ваша фотопленка</span>
+              <p class="film-copy">с одного устройства можно добавить до 21 фотографии</p>
+            </div>
+            <div class="film-counter" aria-live="polite">
+              <strong data-film-left>21</strong>
+              <span>кадров свободно</span>
+              <small class="film-device-code">код плёнки <b data-device-code>••••</b></small>
+            </div>
           </div>
 
-          <fieldset class="choice-section" data-choice-group="salads" data-min="1" data-max="3" data-label="салаты">
-            <legend>салаты <span>выберите до 3 вариантов</span></legend>
-            <div class="choice-grid">
-              <label class="choice-pill"><input type="checkbox" name="salads" value="цезарь с куриным филе"><span>цезарь с куриным филе <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="salads" value="столичный салат"><span>столичный салат <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="salads" value="салат с моцареллой"><span>салат с моцареллой <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="salads" value="шопский салат"><span>шопский салат <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="salads" value="салат с кальмаром и овощами"><span>салат с кальмаром и овощами <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="salads" value="салат с языком и хреном"><span>салат с языком и хреном <small>75 г</small></span></label>
+          <article class="photo-mission" aria-label="Случайное фотозадание">
+            <span class="mission-tape" aria-hidden="true"></span>
+            <span class="mission-label">ваше фотозадание</span>
+            <p class="mission-text" data-photo-mission></p>
+            <div class="mission-controls">
+              <button class="text-button" type="button" data-new-mission>другое задание</button>
+              <button class="text-button mission-done-button" type="button" data-mission-done>снято ♡</button>
             </div>
-            <p class="choice-note" data-choice-note>можно выбрать 1–3 позиции</p>
-          </fieldset>
+            <p class="mission-progress"><span data-missions-completed>0</span> заданий выполнено на этом телефоне</p>
+          </article>
 
-          <fieldset class="choice-section" data-choice-group="vegetables" data-min="2" data-max="2" data-label="овощные холодные закуски">
-            <legend>овощные холодные закуски <span>выберите 2 варианта</span></legend>
-            <div class="choice-grid">
-              <label class="choice-pill"><input type="checkbox" name="vegetables" value="домашние соленья"><span>домашние соленья <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="vegetables" value="овощи свежие"><span>овощи свежие <small>75 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="vegetables" value="пхали из свёклы"><span>пхали из свёклы <small>60 г</small></span></label>
+          <div class="photo-upload-panel">
+            <div class="photo-guest-fields">
+              <label class="photo-field">
+                <span>кто отправляет</span>
+                <input type="text" data-photo-guest-name autocomplete="name" maxlength="80" placeholder="ваше имя" />
+              </label>
+              <label class="photo-field">
+                <span>подпись к кадрам</span>
+                <input type="text" data-photo-note maxlength="140" placeholder="например, привет от третьего стола" />
+              </label>
             </div>
-            <p class="choice-note" data-choice-note>нужно выбрать ровно 2 позиции</p>
-          </fieldset>
 
-          <fieldset class="choice-section" data-choice-group="fish" data-min="2" data-max="2" data-label="рыбные холодные закуски">
-            <legend>рыбные холодные закуски <span>выберите 2 варианта</span></legend>
-            <div class="choice-grid">
-              <label class="choice-pill"><input type="checkbox" name="fish" value="сельдь с картофелем"><span>сельдь с картофелем <small>40/40/20 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="fish" value="рулетики из форели с творожным сыром"><span>рулетики из форели с творожным сыром <small>30 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="fish" value="тапас с муссом из форели и тартаром из огурца"><span>тапас с муссом из форели и тартаром из огурца <small>25 г</small></span></label>
+            <section class="film-refill" data-film-refill hidden aria-labelledby="filmRefillTitle">
+              <span class="film-refill-tape" aria-hidden="true"></span>
+              <p class="film-refill-title" id="filmRefillTitle">плёнка закончилась ♡</p>
+              <p class="film-refill-copy">ваши кадры уже в общем альбоме. чтобы продолжить, покажите организатору код <b data-refill-device-code>••••</b> или активируйте дополнительную плёнку.</p>
+              <div class="film-refill-actions">
+                <button class="text-button" type="button" data-check-refill>проверить новую плёнку</button>
+                <button class="text-button" type="button" data-toggle-redeem>у меня есть код</button>
+              </div>
+              <form class="film-code-form" data-film-code-form hidden>
+                <label>
+                  <span>код дополнительной плёнки</span>
+                  <input type="text" data-film-code-input inputmode="text" autocomplete="off" maxlength="20" placeholder="FILM-AB12CD" />
+                </label>
+                <button type="submit">зарядить плёнку</button>
+              </form>
+              <p class="film-refill-status" data-film-refill-status aria-live="polite"></p>
+            </section>
+
+            <div class="photo-picker-actions">
+              <button class="photo-picker-button" type="button" data-open-camera>
+                <span class="photo-picker-icon" aria-hidden="true">◉</span>
+                <span><b>снять сейчас</b><small>открыть камеру</small></span>
+              </button>
+              <button class="photo-picker-button photo-picker-button-alt" type="button" data-open-gallery>
+                <span class="photo-picker-icon" aria-hidden="true">▧</span>
+                <span><b>выбрать кадры</b><small>из галереи телефона</small></span>
+              </button>
             </div>
-            <p class="choice-note" data-choice-note>нужно выбрать ровно 2 позиции</p>
-          </fieldset>
 
-          <fieldset class="choice-section" data-choice-group="meat" data-min="2" data-max="2" data-label="мясные холодные закуски">
-            <legend>мясные холодные закуски <span>выберите 2 варианта</span></legend>
-            <div class="choice-grid">
-              <label class="choice-pill"><input type="checkbox" name="meat" value="галантин из цыпленка"><span>галантин из цыпленка <small>30 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="meat" value="рулетики из ветчины с творожным сыром"><span>рулетики из ветчины с творожным сыром <small>35 г</small></span></label>
-              <label class="choice-pill"><input type="checkbox" name="meat" value="язык с хреном"><span>язык с хреном <small>30/2 г</small></span></label>
+            <input class="visually-hidden" type="file" accept="image/*,.heic,.heif" capture="environment" data-camera-input />
+            <input class="visually-hidden" type="file" accept="image/*,.heic,.heif" multiple data-gallery-input />
+
+            <div class="photo-selection" data-photo-selection hidden>
+              <div class="photo-selection-heading">
+                <span>выбранные кадры</span>
+                <button class="text-button clear-photos-button" type="button" data-clear-photos>убрать все</button>
+              </div>
+              <div class="polaroid-grid" data-photo-preview></div>
             </div>
-            <p class="choice-note" data-choice-note>нужно выбрать ровно 2 позиции</p>
-          </fieldset>
 
-          <fieldset class="choice-section radio-section" data-radio-group="hotSnack" data-label="горячая закуска">
-            <legend>горячая закуска <span>выберите 1 вариант</span></legend>
-            <div class="choice-grid">
-              <label class="choice-pill"><input type="radio" name="hotSnack" value="жульен куриный" required><span>жульен куриный <small>1/90 г</small></span></label>
-              <label class="choice-pill"><input type="radio" name="hotSnack" value="жульен грибной"><span>жульен грибной <small>1/90 г</small></span></label>
-              <label class="choice-pill"><input type="radio" name="hotSnack" value="драники с тар-таром из форели со сметаной"><span>драники с тар-таром из форели со сметаной <small>80/30/30 г</small></span></label>
-            </div>
-          </fieldset>
+            <button class="photo-upload-button" type="button" data-upload-photos disabled>
+              <span data-upload-button-text>отправить в общий альбом</span>
+              <span class="upload-button-heart" aria-hidden="true">♡</span>
+            </button>
 
-          <fieldset class="choice-section radio-section" data-radio-group="mainCourse" data-label="горячее">
-            <legend>горячее <span>выберите 1 вариант</span></legend>
-            <div class="choice-grid">
-              <label class="choice-pill"><input type="radio" name="mainCourse" value="судак жареный с картофельным пюре и соусом бешамель" required><span>судак жареный с картофельным пюре и соусом бешамель <small>110/120/60 г</small></span></label>
-              <label class="choice-pill"><input type="radio" name="mainCourse" value="горячая буженина с печеными овощами и горчичным соусом"><span>горячая буженина с печеными овощами и горчичным соусом <small>130/100/50 г</small></span></label>
-              <label class="choice-pill"><input type="radio" name="mainCourse" value="стейк из индейки под соусом демиглас с картофелем стоун"><span>стейк из индейки под соусом демиглас с картофелем стоун <small>130/100/30 г</small></span></label>
-            </div>
-          </fieldset>
-
-          <fieldset class="choice-section radio-section" data-radio-group="drink" data-label="чай или кофе">
-            <legend>чай или кофе <span>выберите 1 вариант</span></legend>
-            <div class="choice-grid compact-grid">
-              <label class="choice-pill"><input type="radio" name="drink" value="чай" required><span>чай</span></label>
-              <label class="choice-pill"><input type="radio" name="drink" value="кофе"><span>кофе</span></label>
-              <label class="choice-pill"><input type="radio" name="drink" value="решу на месте"><span>решу на месте</span></label>
-            </div>
-            <p class="choice-note">фрукты, морс 250 мл, хлеб и масло уже включены в меню</p>
-          </fieldset>
-
-          <label class="text-field full-field">
-            <span>аллергии или важный комментарий</span>
-            <textarea name="comment" rows="3" placeholder="например, не люблю грибы"></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button class="save-button" type="submit">сохранить выбор</button>
+            <p class="photo-upload-status" data-photo-upload-status aria-live="polite"></p>
+            <p class="photo-privacy-note">загружаются только выбранные вами фотографии. оригиналы сохраняются в отдельном облачном фотоархиве пары.</p>
           </div>
 
-          <p class="form-status" data-form-status aria-live="polite"></p>
-        </form>
+          <div class="film-strip film-strip-bottom" aria-hidden="true"></div>
+        </div>
       </section>
     </section>
   </main>
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
