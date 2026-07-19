@@ -666,7 +666,7 @@ function createPhotoPreviewCard(photo, index) {
 
     const caption = document.createElement('figcaption');
     const frameName = document.createElement('span');
-    frameName.textContent = `кадр ${twoDigits(index + 1)}`;
+    frameName.textContent = `кадр ${String(index + 1).padStart(2, '0')}`;
     const fileSize = document.createElement('small');
     fileSize.textContent = formatFileSize(photo.file.size);
     caption.append(frameName, fileSize);
